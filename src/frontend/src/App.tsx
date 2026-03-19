@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BottomNav from "./components/BottomNav";
+import InstallPrompt from "./components/InstallPrompt";
 import PlayerBar from "./components/PlayerBar";
 import TopBar from "./components/TopBar";
 import { useInternetIdentity } from "./hooks/useInternetIdentity";
@@ -72,6 +73,7 @@ export default function App() {
       <main className="flex-1 overflow-y-auto pb-40 pt-14">{renderPage()}</main>
       <PlayerBar />
       <BottomNav />
+      <InstallPrompt />
     </div>
   );
 }

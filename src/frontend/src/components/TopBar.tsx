@@ -1,12 +1,14 @@
-import { LogIn, LogOut, Music2, Search, User } from "lucide-react";
+import { Download, LogIn, LogOut, Music2, Search, User } from "lucide-react";
 import { useState } from "react";
 import { useInternetIdentity } from "../hooks/useInternetIdentity";
+import { usePWAInstall } from "../hooks/usePWAInstall";
 import { useNavStore } from "../store/navStore";
 
 export default function TopBar() {
   const { identity, login, clear } = useInternetIdentity();
   const navigate = useNavStore((s) => s.navigate);
   const [query, setQuery] = useState("");
+  const { canInstall, triggerInstall } = usePWAInstall();
   const isAuthenticated = !!identity;
 
   const handleSearch = (e: React.FormEvent) => {
@@ -55,6 +57,19 @@ export default function TopBar() {
       </form>
 
       <div className="flex items-center gap-2 flex-shrink-0">
+        {canInstall && (
+          <button
+            type="button"
+            onClick={triggerInstall}
+            className="flex items-center gap-1.5 text-xs bg-zinc-800 hover:bg-zinc-700 border border-purple-500/40 hover:border-purple-500/70 text-purple-300 hover:text-purple-200 px-3 py-1.5 rounded-full transition-all duration-150"
+            data-ocid="topbar.primary_button"
+            title="Install VibeChain app"
+          >
+            <Download size={13} />
+            <span className="hidden sm:block">Install App</span>
+          </button>
+        )}
+
         {isAuthenticated ? (
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 bg-zinc-700 rounded-full flex items-center justify-center">
@@ -75,7 +90,7 @@ export default function TopBar() {
             type="button"
             onClick={login}
             className="flex items-center gap-1 text-sm bg-zinc-800 hover:bg-zinc-700 px-3 py-1.5 rounded-full transition-colors"
-            data-ocid="topbar.primary_button"
+            data-ocid="topbar.secondary_button"
           >
             <LogIn size={14} />
             <span>Sign in</span>
