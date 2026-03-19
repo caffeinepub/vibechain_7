@@ -12,6 +12,16 @@ export default function Login({ onGuest }: LoginProps) {
 
   return (
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center relative overflow-hidden">
+      {/* Top-left app name */}
+      <div className="absolute top-0 left-0 p-4 flex items-center gap-2 z-20">
+        <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+          <Music2 size={16} className="text-white" />
+        </div>
+        <span className="font-bold text-lg tracking-tight text-white">
+          Vibe<span className="text-red-500">Chain</span>
+        </span>
+      </div>
+
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl" />

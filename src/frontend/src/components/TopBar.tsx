@@ -32,7 +32,7 @@ export default function TopBar() {
         <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
           <Music2 size={16} className="text-white" />
         </div>
-        <span className="font-bold text-lg tracking-tight hidden sm:block">
+        <span className="font-bold text-lg tracking-tight">
           Vibe<span className="text-red-500">Chain</span>
         </span>
       </button>
