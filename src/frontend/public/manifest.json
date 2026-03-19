@@ -1,6 +1,6 @@
 {
   "name": "VibeChain",
-  "short_name": "Vc",
+  "short_name": "VibeChain",
   "description": "VibeChain - Music Streaming App",
   "start_url": "/",
   "display": "standalone",
@@ -9,13 +9,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/assets/generated/vc-icon.dim_192x192.png",
+      "src": "/assets/generated/vibechain-icon.dim_192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/generated/vc-icon.dim_512x512.png",
+      "src": "/assets/generated/vibechain-icon.dim_512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
