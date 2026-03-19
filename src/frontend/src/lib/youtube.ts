@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyASF6qEME23vqwtDtQMrBgjIlfQwoWehpY";
+const API_KEY = "AIzaSyDpNw9tt9wak6-hlZhM2KeBHCVpcQHhpvQ";
 const BASE = "https://www.googleapis.com/youtube/v3";
 
 export interface YTSong {
